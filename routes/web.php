@@ -30,5 +30,9 @@ Route::middleware(['admin'])->group(function () {
         return view('admin.index');
     });
 
+    Route::get('/dashboard/course', 'settings\CourseController@index')->name('course.index');
+    Route::get('/dashboard/course/create', 'settings\CourseController@create')->name('course.create');
+    Route::post('/dashboard/course/create', 'settings\CourseController@store')->name('course.store');
+
     
 });

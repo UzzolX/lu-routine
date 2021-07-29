@@ -97,7 +97,7 @@
 									<i class="menu-bullet menu-bullet-line">
 										<span></span>
 									</i>
-									<span class="menu-text">Lorem</span>
+									<span class="menu-text">Courses</span>
 									<span class="menu-label">
 									</span>
 									<i class="menu-arrow"></i>
@@ -110,7 +110,15 @@
 												<i class="menu-bullet menu-bullet-dot">
 													<span></span>
 												</i>
-												<span class="menu-text">Lorem index</span>
+												<span class="menu-text">See Courses</span>
+											</a>
+										</li>
+										<li class="menu-item" aria-haspopup="true">
+											<a href="#" class="menu-link">
+												<i class="menu-bullet menu-bullet-dot">
+													<span></span>
+												</i>
+												<span class="menu-text">Add Courses</span>
 											</a>
 										</li>
 									</ul>
