@@ -27,7 +27,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::middleware(['admin'])->group(function () {
     
     Route::get('/dashboard', function () {
-        return view('admin.index');
+        return view('admin.routine.routine-index');
     });
 
     //Course
@@ -46,5 +46,11 @@ Route::middleware(['admin'])->group(function () {
     Route::post('/dashboard/teacher/{id}/update', 'settings\TeacherController@update')->name('teacher.update');
     Route::get('/dashboard/teacher/{id}/delete', 'settings\TeacherController@destroy')->name('teacher.delete');
 
+    //Days//Sunday
+    Route::get('/dashboard/sunday', 'routine\days\SundayController@index')->name('sunday.index');
+    Route::get('/dashboard/sunday/create', 'routine\days\SundayController@create')->name('sunday.create');
+    Route::post('/dashboard/sunday/create', 'routine\days\SundayController@store')->name('sunday.store');
     
 });
+
+Route::get('/dashboard/routine', 'routine\RoutineController@index')->name('routine.index');

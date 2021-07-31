@@ -1,5 +1,5 @@
 	<!--begin::Fonts-->
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
 	<!--end::Fonts-->
 	<!--begin::Page Vendors Styles(used by this page)-->
 
@@ -11,7 +11,6 @@
 	<link href="{{asset('backend-assets/assets/plugins/global/plugins.bundle.css')}}" rel="stylesheet" type="text/css" />
 	<link href="{{asset('backend-assets/assets/plugins/custom/prismjs/prismjs.bundle.css')}}" rel="stylesheet" type="text/css" />
 	<link href="{{asset('backend-assets/assets/css/style.bundle.css')}}" rel="stylesheet" type="text/css" />
-
 	<!--end::Global Theme Styles-->
 
 	<!--begin::Layout Themes(used by all pages)-->

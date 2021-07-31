@@ -174,7 +174,7 @@
 
 							<!--end::Svg Icon-->
 						</span>
-						<span class="menu-text">Lorem</span>
+						<span class="menu-text">Routine</span>
 						<i class="menu-arrow"></i>
 					</a>
 					<div class="menu-submenu">
@@ -182,7 +182,7 @@
 						<ul class="menu-subnav">
 							<li class="menu-item menu-item-parent" aria-haspopup="true">
 								<span class="menu-link">
-									<span class="menu-text">Lorem</span>
+									<span class="menu-text">Routine</span>
 								</span>
 							</li>
 							<li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
@@ -190,7 +190,7 @@
 									<i class="menu-bullet menu-bullet-dot">
 										<span></span>
 									</i>
-									<span class="menu-text">Lorem</span>
+									<span class="menu-text">All Routine</span>
 								</a>
 							</li>
 							<li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
@@ -198,7 +198,7 @@
 									<i class="menu-bullet menu-bullet-dot">
 										<span></span>
 									</i>
-									<span class="menu-text">Lorem</span>
+									<span class="menu-text">Create New</span>
 								</a>
 							</li>
 						</ul>
