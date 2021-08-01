@@ -18,7 +18,7 @@
         @foreach($monday as $row => $data)
         <tr>
             @if ($row == 0 || $row % 12 == 0)
-            <th rowspan="12" style="writing-mode: vertical-rl; text-orientation: upright; text-align:center">Sunday</th>
+            <th rowspan="12" style="writing-mode: vertical-rl; text-orientation: upright; text-align:center">Monday</th>
             @endif
             <td>{{$data->section}}</td>
             <td>{{$data->batch}}</td>

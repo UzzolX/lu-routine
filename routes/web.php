@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\Days\Sunday;
+use App\Models\Days\Monday;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -31,8 +32,9 @@ Route::middleware(['admin'])->group(function () {
     
     Route::get('/dashboard', function () {
         $sunday=Sunday::all();
-        return view('admin.routine.routine-index', compact('sunday'));
-    });
+        $monday =Monday::all();
+        return view('admin.routine.routine-index', compact('sunday','monday'));
+    })->name('dashboard.index');
 
     //Course
     Route::get('/dashboard/course', 'settings\CourseController@index')->name('course.index');
