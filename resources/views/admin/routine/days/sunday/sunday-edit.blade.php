@@ -19,7 +19,7 @@
         </div>
     </div>
     <!--begin::Form-->
-    <form action="{{route('sunday.store')}}" method="POST">
+    <form action="{{route('sunday.update')}}" method="POST">
         @csrf
         <div class="card-body">
 

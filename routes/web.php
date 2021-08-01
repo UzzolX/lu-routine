@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Days\Sunday;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,6 +16,8 @@
 //     return view('welcome');
 // });
 
+
+
 Route::get('/', function () {
     return view('user.index');
 });
@@ -27,7 +30,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::middleware(['admin'])->group(function () {
     
     Route::get('/dashboard', function () {
-        return view('admin.routine.routine-index');
+        $sunday=Sunday::all();
+        return view('admin.routine.routine-index', compact('sunday'));
     });
 
     //Course
@@ -50,6 +54,17 @@ Route::middleware(['admin'])->group(function () {
     Route::get('/dashboard/sunday', 'routine\days\SundayController@index')->name('sunday.index');
     Route::get('/dashboard/sunday/create', 'routine\days\SundayController@create')->name('sunday.create');
     Route::post('/dashboard/sunday/create', 'routine\days\SundayController@store')->name('sunday.store');
+    Route::get('/dashboard/sunday/{id}/edit', 'routine\days\SundayController@store')->name('sunday.edit');
+    Route::post('/dashboard/sunday/{id}/update', 'routine\days\SundayController@store')->name('sunday.update');
+    Route::get('/dashboard/sunday/{id}/delete', 'routine\days\SundayController@store')->name('sunday.delete');
+
+    //Days//Monday
+    Route::get('/dashboard/monday', 'routine\days\MondayController@index')->name('monday.index');
+    Route::get('/dashboard/monday/create', 'routine\days\MondayController@create')->name('monday.create');
+    Route::post('/dashboard/monday/create', 'routine\days\MondayController@store')->name('monday.store');
+    Route::get('/dashboard/monday/{id}/edit', 'routine\days\MondayController@store')->name('monday.edit');
+    Route::post('/dashboard/monday/{id}/update', 'routine\days\MondayController@store')->name('monday.update');
+    Route::get('/dashboard/monday/{id}/delete', 'routine\days\MondayController@store')->name('monday.delete');
     
 });
 

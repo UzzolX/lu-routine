@@ -52,6 +52,6 @@ class SundayController extends Controller
         );
 
         Sunday::create($form_data);
-        return redirect('dashboard/sunday')->with('message', 'sunday created successfully.');
+        return redirect('dashboard/sunday/create')->with('message', 'Data added successfully.');
     }
 }

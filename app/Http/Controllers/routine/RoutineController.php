@@ -10,7 +10,7 @@ class RoutineController extends Controller
 {
     public function index()
     {
-        $sunday = Sunday::all();
+        $sunday = Sunday::get();
         return view('admin.routine.routine-index', compact('sunday'));
     }
 }
