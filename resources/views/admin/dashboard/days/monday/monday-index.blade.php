@@ -1,5 +1,3 @@
-@extends('admin.index')
-@section('content')	
 <table class="table table-bordered border-primary">
     <thead>
         <tr>
@@ -14,16 +12,15 @@
             <th scope="col">02:00 PM - 02:50 PM </th>
             <th scope="col">03:00 PM - 03:50 PM</th>
             <th scope="col">04:00 PM - 04:50 PM</th>
-            <th scope="col">Action</th>
         </tr>
     </thead>
     <tbody>
-        @foreach($sunday as $row => $data)
+        @foreach($monday as $row => $data)
         <tr>
             @if ($row == 0 || $row % 12 == 0)
-            <th rowspan="12" style="writing-mode: vertical-rl; text-orientation: upright; text-align:center">Sunday</th>
+            <th rowspan="12" style="writing-mode: vertical-rl; text-orientation: upright; text-align:center">Monday</th>
             @endif
-            <th>{{$data->section}}</th>
+            <td>{{$data->section}}</td>
             <td>{{$data->batch}}</td>
             <td>{{$data->nineAM_ninefiftyAM}}</td>
             <td>{{$data->tenAM_tenfiftyAM}}</td>
@@ -36,18 +33,7 @@
             <td>{{$data->twoPM_twofiftyPM}}</td>
             <td>{{$data->threePM_threefiftyPM}}</td>
             <td>{{$data->fourPM_fourfiftyPM}}</td>
-            <td>
-                <a class=" btn-bg-dark" href="#"> <button type="button"
-                        class="btn btn-info btn-sm">Edit</button>
-                </a>
-                <a href="#">
-                    <button type="button" class="btn btn-danger btn-sm">
-                        Delete
-                    </button>
-                </a>
-            </td>
         </tr>
         @endforeach
     </tbody>
 </table>
-@endsection

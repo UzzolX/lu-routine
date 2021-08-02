@@ -18,10 +18,12 @@ use App\Models\Days\Monday;
 // });
 
 
+Route::get('/', 'user\FrontController@index')->name('user-front.index');
+Route::get('/see-routine', 'user\FrontController@seeRoutine')->name('see-routine.index');
 
-Route::get('/', function () {
-    return view('user.index');
-});
+//Route::get('/', function () {
+  //  return view('user.index');
+//});
 
 Auth::routes();
 
@@ -29,12 +31,14 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 //Admin
 Route::middleware(['admin'])->group(function () {
-    
-    Route::get('/dashboard', function () {
-        $sunday=Sunday::all();
-        $monday =Monday::all();
-        return view('admin.routine.routine-index', compact('sunday','monday'));
-    })->name('dashboard.index');
+
+    Route::get('/dashboard', 'dashboard\DashboardController@index')->name('dashboard.index');
+
+    //Route::get('/dashboardd', function () {
+       // $sunday=Sunday::all();
+       // $monday =Monday::all();
+       // return view('admin.routine.routine-index', compact('sunday','monday'));
+    //});
 
     //Course
     Route::get('/dashboard/course', 'settings\CourseController@index')->name('course.index');

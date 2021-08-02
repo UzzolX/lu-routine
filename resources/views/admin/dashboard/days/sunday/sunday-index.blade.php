@@ -1,6 +1,4 @@
-@extends('admin.index')
-@section('content')	
-<table class="table table-bordered border-primary">
+	<table class="table table-bordered border-primary">
     <thead>
         <tr>
             <th scope="col">#</th>
@@ -14,7 +12,6 @@
             <th scope="col">02:00 PM - 02:50 PM </th>
             <th scope="col">03:00 PM - 03:50 PM</th>
             <th scope="col">04:00 PM - 04:50 PM</th>
-            <th scope="col">Action</th>
         </tr>
     </thead>
     <tbody>
@@ -36,18 +33,7 @@
             <td>{{$data->twoPM_twofiftyPM}}</td>
             <td>{{$data->threePM_threefiftyPM}}</td>
             <td>{{$data->fourPM_fourfiftyPM}}</td>
-            <td>
-                <a class=" btn-bg-dark" href="#"> <button type="button"
-                        class="btn btn-info btn-sm">Edit</button>
-                </a>
-                <a href="#">
-                    <button type="button" class="btn btn-danger btn-sm">
-                        Delete
-                    </button>
-                </a>
-            </td>
         </tr>
         @endforeach
     </tbody>
 </table>
-@endsection

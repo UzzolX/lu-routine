@@ -11,15 +11,15 @@
                             <span class="navbar-toggler-icon"></span>
                         </button>
                         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                            @if(Auth::check())
                             <ul class="navbar-nav">
                                 <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="{{ route('login') }}"> <button>
-                                            Login</button></a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}"> <button> Register</button> </a>
+                                    
+                                    <a class="nav-link active" aria-current="page" href="{{ route('dashboard.index') }}"> <button>
+                                            Dashboard</button></a>
                                 </li>
                             </ul>
+                            @endif
                         </div>
                     </div>
                 </nav>

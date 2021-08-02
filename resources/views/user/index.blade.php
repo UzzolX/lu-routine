@@ -22,7 +22,8 @@
                             <div class="contain">
                                 <h3>Welcome To LU Routine </h3>
                                 <p>A web appliction to make routine</p>
-                                <a href="#"><button>Get Started Now</button></a>
+                                <a href="#"><button>Get Started Now</button></a><br>
+                                <a href="{{ route('see-routine.index') }}"><button style="margin-top:10px;">See Routine</button></a>
                             </div>
                         </div>
                     </div>

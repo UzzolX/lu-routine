@@ -1,0 +1,10 @@
+@extends('admin.index')
+@section('content')
+@include('admin.dashboard.days.sunday.sunday-index')
+@include('admin.dashboard.days.monday.monday-index')
+@include('admin.dashboard.days.monday.monday-index')
+@include('admin.dashboard.days.monday.monday-index')
+@include('admin.dashboard.days.monday.monday-index')
+@include('admin.dashboard.days.sunday.sunday-index')
+@include('admin.dashboard.days.sunday.sunday-index')
+@endsection
