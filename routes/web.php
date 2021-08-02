@@ -33,6 +33,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::middleware(['admin'])->group(function () {
 
     Route::get('/dashboard', 'dashboard\DashboardController@index')->name('dashboard.index');
+    Route::get('/dashboard/pdf', 'dashboard\DashboardController@pdf')->name('dashboard.pdf');
 
     //Route::get('/dashboardd', function () {
        // $sunday=Sunday::all();
