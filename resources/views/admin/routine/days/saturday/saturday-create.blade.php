@@ -9,7 +9,7 @@
         @endif
     <div class="card-header">
         <h3 class="card-title">
-            Add Data for Sunday
+            Add Data for saturday
         </h3>
         <div class="card-toolbar">
             <div class="example-tools justify-content-center">
@@ -19,7 +19,7 @@
         </div>
     </div>
     <!--begin::Form-->
-    <form action="{{route('sunday.store')}}" method="POST">
+    <form action="{{route('saturday.store')}}" method="POST">
         @csrf
         <div class="card-body">
 

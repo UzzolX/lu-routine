@@ -18,7 +18,7 @@
 </style>
 <div class="col-xl-12">
     <div class="create">
-        <a href="{{route('monday.create')}}">
+        <a href="{{route('saturday.create')}}">
             <button type="button" class="btn btn-info btn-sm">Add Data</button>
 
         </a>
@@ -46,10 +46,10 @@
         </tr>
     </thead>
     <tbody>
-        @foreach($sunday as $row => $data)
+        @foreach($saturday as $row => $data)
         <tr>
             @if ($row == 0 || $row % 12 == 0)
-            <th rowspan="12" style="writing-mode: vertical-rl; text-orientation: upright; text-align:center">Sunday</th>
+            <th rowspan="12" style="writing-mode: vertical-rl; text-orientation: upright; text-align:center">saturday</th>
             @endif
             <td>{{$data->section}}</td>
             <td>{{$data->batch}}</td>
@@ -65,10 +65,10 @@
             <td>{{$data->threePM_threefiftyPM}}</td>
             <td>{{$data->fourPM_fourfiftyPM}}</td>
             <td>
-                <a class=" btn-bg-dark" href="{{route('sunday.edit',[$data->id])}}"> <button type="button"
+                <a class=" btn-bg-dark" href="{{route('saturday.edit',[$data->id])}}"> <button type="button"
                         class="btn btn-info btn-sm">Edit</button>
                 </a>
-                <a href="{{route('sunday.delete',[$data->id])}}">
+                <a href="{{route('saturday.delete',[$data->id])}}">
                     <button type="button" class="btn btn-danger btn-sm">
                         Delete
                     </button>

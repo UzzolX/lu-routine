@@ -18,7 +18,7 @@
 </style>
 <div class="col-xl-12">
     <div class="create">
-        <a href="{{route('monday.create')}}">
+        <a href="{{route('sunday.create')}}">
             <button type="button" class="btn btn-info btn-sm">Add Data</button>
 
         </a>
