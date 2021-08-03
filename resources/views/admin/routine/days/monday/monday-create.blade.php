@@ -9,7 +9,7 @@
     @endif
     <div class="card-header">
         <h3 class="card-title">
-            Add Data for Sunday
+            Add Data for Monday
         </h3>
         <div class="card-toolbar">
             <div class="example-tools justify-content-center">
@@ -79,6 +79,9 @@
                             
                           @foreach($teacher as $cat)
                             <option value="{{$cat->teacher_code}}">{{$cat->teacher_code}}</option>
+                            @endforeach
+                            @foreach($course as $cat)
+                            <option value="{{$cat->course_code}}">{{$cat->course_code}}</option>
                             @endforeach
                         </select>
                             @if ($errors->has('nineAM_ninefiftyAM'))

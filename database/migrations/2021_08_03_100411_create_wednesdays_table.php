@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSundaysTable extends Migration
+class CreateWednesdaysTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateSundaysTable extends Migration
      */
     public function up()
     {
-        Schema::create('sundays', function (Blueprint $table) {
+        Schema::create('wednesdays', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('session')->nullable();
             $table->string('day')->nullable();
@@ -38,6 +38,6 @@ class CreateSundaysTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('sundays');
+        Schema::dropIfExists('wednesdays');
     }
 }

@@ -15,17 +15,17 @@ class CreateMondaysTable extends Migration
     {
         Schema::create('mondays', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('session');
+            $table->string('session')->nullable();
             $table->string('day')->nullable();
-            $table->string('section');
+            $table->string('section')->nullable();
             $table->string('batch')->nullable();
-            $table->string('nineAM_ninefiftyAM');
-            $table->string('tenAM_tenfiftyAM');
-            $table->string('elevenAM_elevenfiftyAM');
-            $table->string('twelvePM_twelvefiftyPM');
-            $table->string('twoPM_twofiftyPM');
-            $table->string('threePM_threefiftyPM');
-            $table->string('fourPM_fourfiftyPM');
+            $table->string('nineAM_ninefiftyAM')->nullable();
+            $table->string('tenAM_tenfiftyAM')->nullable();
+            $table->string('elevenAM_elevenfiftyAM')->nullable();
+            $table->string('twelvePM_twelvefiftyPM')->nullable();
+            $table->string('twoPM_twofiftyPM')->nullable();
+            $table->string('threePM_threefiftyPM')->nullable();
+            $table->string('fourPM_fourfiftyPM')->nullable();
             $table->string('break')->nullable();
             $table->timestamps();
         });

@@ -41,11 +41,36 @@ class MondayController extends Controller
             'break'   =>  'required',
         ]);
 
-
         $input = $request->all();
         $nineAM_ninefiftyAM = $input['nineAM_ninefiftyAM'];
         $input['nineAM_ninefiftyAM'] = implode(',', $nineAM_ninefiftyAM);
         Monday::create($input);
-        return redirect('dashboard/monday/create')->with('message', 'Data added successfully.');
+        return redirect('dashboard/monday')->with('message', 'Data added successfully.');
+    }
+
+    public function edit($id)
+    {
+        $monday = Monday::findOrFail($id);
+        $teacher = Teacher::all();
+        return view('admin.routine.days.monday.monday-edit', compact('monday', 'teacher'));
+    }
+
+    public function update(Request $request, $id)
+    {
+
+        $monday = Monday::findOrFail($id);
+        $input = $request->all();
+        $nineAM_ninefiftyAM = $input['nineAM_ninefiftyAM'];
+        $input['nineAM_ninefiftyAM'] = implode(',', $nineAM_ninefiftyAM);
+        $monday->update($input);
+        return redirect('dashboard/monday')->with('message', 'Data is successfully updated');
+    }
+
+    public function destroy($id)
+    {
+        $monday = Monday::findOrFail($id);
+        $monday->delete();
+
+        return redirect('dashboard/monday')->with('message', 'Data is successfully deleted');
     }
 }

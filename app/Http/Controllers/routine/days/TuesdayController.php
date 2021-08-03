@@ -2,21 +2,21 @@
 
 namespace App\Http\Controllers\routine\days;
 
-use App\Models\Days\Sunday;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Days\Tuesday;
 
-class SundayController extends Controller
+class TuesdayController extends Controller
 {
     public function index()
     {
-        $sunday = Sunday::all();
-        return view('admin.routine.days.sunday.sunday-index', compact('sunday'));
+        $tuesday = Tuesday::all();
+        return view('admin.routine.days.tuesday.tuesday-index', compact('tuesday'));
     }
 
     public function create()
     {
-        return view('admin.routine.days.sunday.sunday-create');
+        return view('admin.routine.days.tuesday.tuesday-create');
     }
 
     public function store(Request $request)
@@ -51,41 +51,40 @@ class SundayController extends Controller
             'break'  => $request->break,
         );
 
-        Sunday::create($form_data);
-        return redirect('dashboard/sunday/create')->with('message', 'Data added successfully.');
+        Tuesday::create($form_data);
+        return redirect('dashboard/tuesday/create')->with('message', 'Data added successfully.');
     }
 
     public function edit($id)
     {
-        $sunday = Sunday::findOrFail($id);
-        return view('admin.routine.days.sunday.sunday-edit', compact('sunday'));
+        $tuesday = Tuesday::findOrFail($id);
+        return view('admin.routine.days.tuesday.tuesday-edit', compact('tuesday'));
     }
 
     public function update(Request $request, $id)
     {
-        $sunday = Sunday::findOrFail($id);
-        $sunday->session   = $request->session;
-        $sunday->day  = $request->day;
-        $sunday->section  = $request->section;
-        $sunday->batch  = $request->batch;
-        $sunday->nineAM_ninefiftyAM  = $request->nineAM_ninefiftyAM;
-        $sunday->tenAM_tenfiftyAM  = $request->tenAM_tenfiftyAM;
-        $sunday->elevenAM_elevenfiftyAM  = $request->elevenAM_elevenfiftyAM;
-        $sunday->twelvePM_twelvefiftyPM  = $request->twelvePM_twelvefiftyPM;
-        $sunday->twoPM_twofiftyPM  = $request->twoPM_twofiftyPM;
-        $sunday->threePM_threefiftyPM  = $request->threePM_threefiftyPM;
-        $sunday->fourPM_fourfiftyPM  = $request->fourPM_fourfiftyPM;
-        $sunday->break  = $request->break;
-        $sunday->save();
-        return redirect('dashboard/sunday')->with('message', 'Data is successfully updated');
+        $tuesday = Tuesday::findOrFail($id);
+        $tuesday->session   = $request->session;
+        $tuesday->day  = $request->day;
+        $tuesday->section  = $request->section;
+        $tuesday->batch  = $request->batch;
+        $tuesday->nineAM_ninefiftyAM  = $request->nineAM_ninefiftyAM;
+        $tuesday->tenAM_tenfiftyAM  = $request->tenAM_tenfiftyAM;
+        $tuesday->elevenAM_elevenfiftyAM  = $request->elevenAM_elevenfiftyAM;
+        $tuesday->twelvePM_twelvefiftyPM  = $request->twelvePM_twelvefiftyPM;
+        $tuesday->twoPM_twofiftyPM  = $request->twoPM_twofiftyPM;
+        $tuesday->threePM_threefiftyPM  = $request->threePM_threefiftyPM;
+        $tuesday->fourPM_fourfiftyPM  = $request->fourPM_fourfiftyPM;
+        $tuesday->break  = $request->break;
+        $tuesday->save();
+        return redirect('dashboard/tuesday')->with('message', 'Data is successfully updated');
     }
 
     public function destroy($id)
     {
-        $sunday = Sunday::findOrFail($id);
-        $sunday->delete();
+        $tuesday = Tuesday::findOrFail($id);
+        $tuesday->delete();
 
-        return redirect('dashboard/sunday')->with('message', 'Data is successfully deleted');
+        return redirect('dashboard/tuesday')->with('message', 'Data is successfully deleted');
     }
-
 }

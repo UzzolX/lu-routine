@@ -298,7 +298,7 @@
                                                 <i class="menu-arrow"></i>
                                                 <ul class="menu-subnav">
                                                     <li class="menu-item" aria-haspopup="true">
-                                                        <a href="{{route('monday.index')}}" class="menu-link">
+                                                        <a href="{{route('tuesday.index')}}" class="menu-link">
                                                             <i class="menu-bullet menu-bullet-dot">
                                                                 <span></span>
                                                             </i>
@@ -306,7 +306,7 @@
                                                         </a>
                                                     </li>
                                                     <li class="menu-item" aria-haspopup="true">
-                                                        <a href="{{route('monday.create')}}" class="menu-link">
+                                                        <a href="{{route('tuesday.create')}}" class="menu-link">
                                                             <i class="menu-bullet menu-bullet-dot">
                                                                 <span></span>
                                                             </i>
@@ -331,7 +331,7 @@
                                                 <i class="menu-arrow"></i>
                                                 <ul class="menu-subnav">
                                                     <li class="menu-item" aria-haspopup="true">
-                                                        <a href="{{route('monday.index')}}" class="menu-link">
+                                                        <a href="{{route('wednesday.index')}}" class="menu-link">
                                                             <i class="menu-bullet menu-bullet-dot">
                                                                 <span></span>
                                                             </i>
@@ -339,7 +339,7 @@
                                                         </a>
                                                     </li>
                                                     <li class="menu-item" aria-haspopup="true">
-                                                        <a href="{{route('monday.create')}}" class="menu-link">
+                                                        <a href="{{route('wednesday.create')}}" class="menu-link">
                                                             <i class="menu-bullet menu-bullet-dot">
                                                                 <span></span>
                                                             </i>
@@ -364,7 +364,7 @@
                                                 <i class="menu-arrow"></i>
                                                 <ul class="menu-subnav">
                                                     <li class="menu-item" aria-haspopup="true">
-                                                        <a href="{{route('monday.index')}}" class="menu-link">
+                                                        <a href="{{route('thursday.index')}}" class="menu-link">
                                                             <i class="menu-bullet menu-bullet-dot">
                                                                 <span></span>
                                                             </i>
@@ -372,7 +372,7 @@
                                                         </a>
                                                     </li>
                                                     <li class="menu-item" aria-haspopup="true">
-                                                        <a href="{{route('monday.create')}}" class="menu-link">
+                                                        <a href="{{route('thursday.create')}}" class="menu-link">
                                                             <i class="menu-bullet menu-bullet-dot">
                                                                 <span></span>
                                                             </i>
@@ -397,7 +397,7 @@
                                                 <i class="menu-arrow"></i>
                                                 <ul class="menu-subnav">
                                                     <li class="menu-item" aria-haspopup="true">
-                                                        <a href="{{route('monday.index')}}" class="menu-link">
+                                                        <a href="{{route('friday.index')}}" class="menu-link">
                                                             <i class="menu-bullet menu-bullet-dot">
                                                                 <span></span>
                                                             </i>
@@ -405,7 +405,7 @@
                                                         </a>
                                                     </li>
                                                     <li class="menu-item" aria-haspopup="true">
-                                                        <a href="{{route('monday.create')}}" class="menu-link">
+                                                        <a href="{{route('friday.create')}}" class="menu-link">
                                                             <i class="menu-bullet menu-bullet-dot">
                                                                 <span></span>
                                                             </i>
@@ -430,7 +430,7 @@
                                                 <i class="menu-arrow"></i>
                                                 <ul class="menu-subnav">
                                                     <li class="menu-item" aria-haspopup="true">
-                                                        <a href="{{route('monday.index')}}" class="menu-link">
+                                                        <a href="{{route('saturday.index')}}" class="menu-link">
                                                             <i class="menu-bullet menu-bullet-dot">
                                                                 <span></span>
                                                             </i>
@@ -438,7 +438,7 @@
                                                         </a>
                                                     </li>
                                                     <li class="menu-item" aria-haspopup="true">
-                                                        <a href="{{route('monday.create')}}" class="menu-link">
+                                                        <a href="{{route('saturday.create')}}" class="menu-link">
                                                             <i class="menu-bullet menu-bullet-dot">
                                                                 <span></span>
                                                             </i>
