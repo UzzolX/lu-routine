@@ -13,11 +13,33 @@
                         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                             <ul class="navbar-nav">
                                 <li class="nav-item">
+                                     @if(Auth::check())
+                                    <a class="nav-link active" aria-current="page" href="{{ route('dashboard.index') }}"> <button>
+                                            Dashboard</button></a>
+                                    @else
                                     <a class="nav-link active" aria-current="page" href="{{ route('login') }}"> <button>
                                             Login</button></a>
+                                    @endif
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}"> <button> Register</button> </a>
+                                    @if(!Auth::check())
+                                    <a class="nav-link" href="{{ route('register') }}"> <button>Register</button> </a>
+                                    @endif
+                                </li>
+                                <li class="nav-item">
+                                    @if(Auth::check())
+                                    
+                                    <a class="nav-link" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();"> <button>Logout</button> 
+                                    
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+                                    
+                                    @endif
                                 </li>
                             </ul>
                         </div>

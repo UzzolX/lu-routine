@@ -31,14 +31,14 @@ class MondayController extends Controller
             'day'   =>  'required',
             'section'   =>  'required',
             'batch'   =>  'required',
-            'nineAM_ninefiftyAM'   =>  'required',
-            'tenAM_tenfiftyAM'   =>  'required',
-            'elevenAM_elevenfiftyAM'   =>  'required',
-            'twelvePM_twelvefiftyPM'   =>  'required',
-            'twoPM_twofiftyPM'   =>  'required',
-            'threePM_threefiftyPM'   =>  'required',
-            'fourPM_fourfiftyPM'   =>  'required',
-            'break'   =>  'required',
+          //  'nineAM_ninefiftyAM'   =>  'required',
+           // 'tenAM_tenfiftyAM'   =>  'required',
+           // 'elevenAM_elevenfiftyAM'   =>  'required',
+           // 'twelvePM_twelvefiftyPM'   =>  'required',
+           // 'twoPM_twofiftyPM'   =>  'required',
+           // 'threePM_threefiftyPM'   =>  'required',
+           // 'fourPM_fourfiftyPM'   =>  'required',
+           // 'break'   =>  'required',
         ]);
 
         $input = $request->all();

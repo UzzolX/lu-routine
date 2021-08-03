@@ -12,7 +12,7 @@
 
 <body>
     <!--top area start-->
-@include('user.partials.nav')
+    @include('user.partials.nav')
     <section>
         <div class="main-page">
             <div class="container">
@@ -22,8 +22,9 @@
                             <div class="contain">
                                 <h3>Welcome To LU Routine </h3>
                                 <p>A web appliction to make routine</p>
-                                <a href="#"><button>Get Started Now</button></a><br>
-                                <a href="{{ route('see-routine.index') }}"><button style="margin-top:10px;">See Routine</button></a>
+                                {{-- <a href="{{ route('dashboard.index') }}"><button>Get Started Now</button></a><br> --}}
+                                <a href="{{ route('see-routine.index') }}"><button style="margin-top:10px;">See
+                                        Routine</button></a>
                             </div>
                         </div>
                     </div>
@@ -31,23 +32,16 @@
 
             </div>
             <div class="wave">
-                
                 <img src="{{asset('frontend-asstets/assets/image/wave.png')}}" alt="">
             </div>
+
             <div class="pic">
-                <img src="{{asset('frontend-asstets/assets/image/w.jpg')}}" alt="">
+                <img src="{{asset('frontend-asstets/assets/image/w2.jpg')}}" alt="">
             </div>
         </div>
-
-
     </section>
     <!--top area end-->
-    <!--main area start-->
-    <main>
-
-    </main>
-    <!--main area end-->
-@include('user.partials.footer')
+    @include('user.partials.footer')
 </body>
 
 </html>
