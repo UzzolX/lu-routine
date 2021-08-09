@@ -54,6 +54,14 @@ Route::middleware(['admin'])->group(function () {
     Route::post('/dashboard/teacher/{id}/update', 'settings\TeacherController@update')->name('teacher.update');
     Route::get('/dashboard/teacher/{id}/delete', 'settings\TeacherController@destroy')->name('teacher.delete');
 
+    //Room
+    Route::get('/dashboard/room', 'settings\RoomController@index')->name('room.index');
+    Route::get('/dashboard/room/create', 'settings\RoomController@create')->name('room.create');
+    Route::post('/dashboard/room/create', 'settings\RoomController@store')->name('room.store');
+    Route::get('/dashboard/room/{id}/edit', 'settings\RoomController@edit')->name('room.edit');
+    Route::post('/dashboard/room/{id}/update', 'settings\RoomController@update')->name('room.update');
+    Route::get('/dashboard/room/{id}/delete', 'settings\RoomController@destroy')->name('room.delete');
+
     //Days//Sunday
     Route::get('/dashboard/sunday', 'routine\days\SundayController@index')->name('sunday.index');
     Route::get('/dashboard/sunday/create', 'routine\days\SundayController@create')->name('sunday.create');
