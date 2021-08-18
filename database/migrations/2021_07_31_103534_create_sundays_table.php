@@ -15,17 +15,13 @@ class CreateSundaysTable extends Migration
     {
         Schema::create('sundays', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('session')->nullable();
-            $table->string('day')->nullable();
-            $table->string('section')->nullable();
-            $table->string('batch')->nullable();
-            $table->string('nineAM_ninefiftyAM')->nullable();
-            $table->string('tenAM_tenfiftyAM')->nullable();
-            $table->string('elevenAM_elevenfiftyAM')->nullable();
-            $table->string('twelvePM_twelvefiftyPM')->nullable();
-            $table->string('twoPM_twofiftyPM')->nullable();
-            $table->string('threePM_threefiftyPM')->nullable();
-            $table->string('fourPM_fourfiftyPM')->nullable();
+            $table->string('section_id')->nullable();
+            $table->string('batch_id')->nullable();
+            $table->string('course_id')->nullable();
+            $table->string('teacher_id')->nullable();
+            $table->string('room_id')->nullable();
+            $table->string('class_start')->nullable();
+            $table->string('class_end')->nullable();
             $table->string('break')->nullable();
             $table->timestamps();
         });

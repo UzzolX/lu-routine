@@ -7,17 +7,13 @@ use Illuminate\Database\Eloquent\Model;
 class Sunday extends Model
 {
     protected $fillable = [
-        'session', 
-        'day',
-        'section',
-        'batch',
-        'nineAM_ninefiftyAM',
-        'tenAM_tenfiftyAM',
-        'elevenAM_elevenfiftyAM',
-        'twelvePM_twelvefiftyPM',
-        'twoPM_twofiftyPM',
-        'threePM_threefiftyPM',
-        'fourPM_fourfiftyPM',
+        'section_id',
+        'batch_id',
+        'course_id',
+        'teacher_id',
+        'room_id',
+        'class_start',
+        'class_end',
         'break'
     ];
 }
