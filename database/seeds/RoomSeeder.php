@@ -70,7 +70,7 @@ class RoomSeeder extends Seeder
                 'room_title' => 'General Lab, AB-1'
             ],
         ];
-
+        Room::truncate();
         Room::insert($classeRooms);
     }
 }
